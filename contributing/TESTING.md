@@ -8,14 +8,13 @@ corresponding regression test.
 
 We use the following suite of tools for tests:
 
-* **Mocha** for unit testing server-side code.
-* **Karma and Jasmine** for unit testing Angular code.
-* **Protractor** for end-to-end browser tests.
-* **Istanbul** for code coverage reports.
+* **Mocha** for unit testing server-side code
+* **Chai** for route testing server-side
+* **Pretender JS** for creating a mock server routes with Ember/
+* **QUnit** default Ember testing framework
 
-Coverage reports are generated and stored in the `coverage` directory. These
-reports are generated in both `html` for developer visualization and `lcov` for
-reporting purposes.
+[Ember Testing](https://guides.emberjs.com/v2.12.0/testing/) is included with
+any Ember application generated using Ember CLI.
 
 [TravisCI](https://travis-ci.com) is used for Continuous Integration and will
 run the entire test suite. End-to-end browser tests are executed using the
