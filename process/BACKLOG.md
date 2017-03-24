@@ -1,7 +1,7 @@
 Backlog
 ==
 
-The backlog for each project is managed directly in GitHub. All stories are represented through [Issues](https://guides.github.com/features/issues/) and linked [Tasks](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments) in Github and are managed in task boards through Zenhub to better represent the stage of each story in the release cycle.
+The backlog for each project is managed through [Pivotal Tracker](https://www.pivotaltracker.com/). All stories are represented through [Issues](https://guides.github.com/features/issues/) and linked [Tasks](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments) in Github and are managed in task boards through Zenhub to better represent the stage of each story in the release cycle.
 
 ## Story types
 
