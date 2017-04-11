@@ -35,6 +35,9 @@ and needs to be released before the next release cycle. Always branches off of
 `master` and is merged into `master` and `develop` when completed. Is usually
 accompanied by a mid-cycle production release.
 
+**Branch Names** should be a 2 or 3 word description followed by the Pivotal story Id.
+- ie. `upgrade_node_version_120148137`
+
 Once the feature is complete and marked as Ready to Merge, all commits can be
 squashed, if desired, into a single commit following our
 [Commit Message Format guidelines](#commit-message-format). The

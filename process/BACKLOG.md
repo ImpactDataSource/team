@@ -60,6 +60,6 @@ All issues are moved between Pipelines representing their current stage within t
     * *Accepted* Completed functionality/bug fix has been demonstrated to developers and product owners and code is ready to be merged into master branch
     * *Rejected* Functioality demonstration did not behave as planned or completion criteria was not fulfilled in the eyes of the product owner. Revise and re-start story.
 
-      *Chores only have a *Started* and *Finished* state and are immediately moved to the done column when "Finish" button is clicked?
+      *Chores only have a *Started* and *Finished* state and are immediately moved to the done column when "Finish" button is clicked.
 
 * **Done** These issues have been accepted by the product owner or business stakeholder and no additional work is required. All code should meet the agreed-upon Definition of Done criteria and is awaiting final merge into the release branch.
