@@ -379,9 +379,73 @@ specified by the project, <del>all front-end Javascript is run through
 <a href="https://webpack.github.io/" target="_blank">webpack</a> and <a href="https://babeljs.io/" target="_blank">Babel</a> which
 transpiles to browser-compatible ES5.</del> Ember does a lot of this for us.</p>
 <p>Code style follows a slightly relaxed Google Javascript style guide and should
-be linted with ESLint. See the <a href=".eslintrc.js">.eslintrc.js file</a> in this
-repository for the current list of exceptions configured.</p>
-
+be linted with ESLint.</p>
+<h5 id="general-rules">General Rules:</h5>
+<ul>
+<li>No space at top of file.</li>
+<li>One space at end of file.</li>
+<li>Never 2 lines between content.</li>
+<li>Always single space after comma.</li>
+<li>Never spaces inside parentheses.</li>
+</ul>
+<h5 id="objects">Objects:</h5>
+<ul>
+<li>Space inside brackets when on same line.<ul>
+<li><code>{ foo: bar, fizz: bazz }</code></li>
+<li><code>const { computed, run } = Ember;</code></li>
+</ul>
+</li>
+<li>No extra whitespace when object spans multiple lines.</li>
+</ul>
+<h5 id="functions">Functions:</h5>
+<ul>
+<li>No space after word function or function name.</li>
+<li>Single space between parentheses and curly bracket.</li>
+<li><p>No white space after curly bracket.</p>
+</li>
+<li><p>Anonymous functions:</p>
+</li>
+</ul>
+<pre><code>columns.forEach(function(column) {
+  controller.send(&apos;save&apos;, column.get(&apos;columnName&apos;), column.get(&apos;cellValues&apos;));
+});
+</code></pre><ul>
+<li>Named functions:</li>
+</ul>
+<pre><code>ASQ(function _findDistrict(done) {
+  TaxDistrict.model.findById(req.params.id).exec(done.errfcb);
+});
+</code></pre><ul>
+<li>Arrow functions:</li>
+</ul>
+<pre><code>Ember.run(() =&gt; {
+  this.updateRawValue();
+});
+</code></pre><h5 id="indentation">Indentation:</h5>
+<ul>
+<li>Use increments of 2 spaces for indentation.</li>
+</ul>
+<h5 id="if-statements">If statements:</h5>
+<ul>
+<li>No inline if statements.<ul>
+<li>ie. <code>if (this === that) { return something };</code></li>
+<li>exception: ternary operators:<ul>
+<li>ie. <code>value = array[i] !== undefined ? array[i] : &quot;0&quot;;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Space between curly brackets and <code>else</code>/<code>else if</code></li>
+<li><code>else</code>/<code>else if</code> on same line as previous closing bracket.</li>
+</ul>
+<pre><code>if (something === somethingElse) {
+  return statement;
+}  else if {
+  return statement;
+} else {
+  return statement;
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -424,7 +488,7 @@ repository for the current list of exceptions configured.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code style","level":"4.2","depth":1,"next":{"title":"GIT","level":"4.3","depth":1,"path":"contributing/GIT.md","ref":"contributing/GIT.md","articles":[{"title":"Branching","level":"4.3.1","depth":2,"anchor":"#branching","path":"contributing/GIT.md","ref":"contributing/GIT.md#branching","articles":[]},{"title":"Commit message format","level":"4.3.2","depth":2,"anchor":"#commit-message-format","path":"contributing/GIT.md","ref":"contributing/GIT.md#commit-message-format","articles":[]}]},"previous":{"title":"Introduction","level":"4.1","depth":1,"path":"contributing/README.md","ref":"contributing/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contributing/CODE_STYLE.md","mtime":"2017-04-11T02:38:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-11T02:56:39.683Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code style","level":"4.2","depth":1,"next":{"title":"GIT","level":"4.3","depth":1,"path":"contributing/GIT.md","ref":"contributing/GIT.md","articles":[{"title":"Branching","level":"4.3.1","depth":2,"anchor":"#branching","path":"contributing/GIT.md","ref":"contributing/GIT.md#branching","articles":[]},{"title":"Commit message format","level":"4.3.2","depth":2,"anchor":"#commit-message-format","path":"contributing/GIT.md","ref":"contributing/GIT.md#commit-message-format","articles":[]}]},"previous":{"title":"Introduction","level":"4.1","depth":1,"path":"contributing/README.md","ref":"contributing/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contributing/CODE_STYLE.md","mtime":"2017-05-07T00:58:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-07T00:59:34.142Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
